@@ -1,0 +1,32 @@
+You will write a responsive website styled with Bootstrap. The purpose of the website will be a blog, where anyone will be able to create an account and log in for example with existing Google account and then to write a blog post. In the blog post, the user can insert text, table and simple plots. The website will present the posts as a continous flow of posts. To enable easy filtering, each post will be tagged. Os the left, there will be a cloud of tags ( many key words) whose font will express the number of blog posts tagged by the tag. The website will present the posts sorted by date with newest on top.
+I already have a structure of my program:
+/blog-website
+|-- index.html
+|-- styles.css
+|-- scripts.js
+
+In my index.html file, I included Bootstrap, jQuery, and Google Sign-In API. Now, you will only write the contents of styles.css without any other instructions, just the code.
+
+
+
+
+
+
+I write a responsive website styled with Bootstrap. The purpose of the website will be a blog, where anyone will be able to create an account and log in for example with existing Google account and then to write a blog post. In the blog post, the user can insert text, table and simple plots. The website will present the posts as a continous flow of posts. To enable easy filtering, each post will be tagged. Os the left, there will be a cloud of tags ( many key words) whose font will express the number of blog posts tagged by the tag. The website will present the posts sorted by date with newest on top.
+I have a following structure of my program:
+/blog-website
+|-- index.html
+|-- styles.css
+|-- scripts.js
+
+In my index.html file, I included Bootstrap, jQuery, and Google Sign-In API. I also wrote the styles.css and also the scripts.js file in which I have the following functions:
+onSignIn(googleUser)
+signOut() 
+fetchPosts()
+renderPosts(posts)
+fetchTags()
+renderTags(tags)
+filterPostsByTag(tag)
+
+Now, can you tell me 1. is there anything missing? 2. how to test this website? I just have these files in a folder in my windows PC.
+
