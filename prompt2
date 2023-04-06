@@ -1,0 +1,129 @@
+You will write a responsive blog website in node.js + express.js styled with Bootstrap.  
+The website will be simple and clean. It will present all the posts as a continuous flow of posts from newest to oldest. To enable easy filtering, 
+each post will be tagged. Os the left panel, there will be a word cloud (many tags, the size and thickness of the tag will express incidence of a tag among the posts).
+Anyone will be able to create an account and log-in with existing Google account and then to write a blog post. In the blog post, the user can insert text and images.
+The database for the blog posts and images will be Postgres so that I can test it later in Heroku. First, you will write a basic structure of the web project,
+list all source files and then, you will give me a code for the main javascript file.
+
+Here's an outline of the project's structure:
+
+/blog
+  ├── public
+  │   ├── css
+  │   │    └── styles.css
+  │   ├── img
+  │   ├── js
+  │   │    └── main.js
+  │   └── libs
+  │        └── bootstrap
+  ├── views
+  │   ├── layouts
+  │   │    └── main.hbs
+  │   ├── partials
+  │   │    └── wordcloud.hbs
+  │   ├── index.hbs
+  │   ├── login.hbs
+  │   ├── register.hbs
+  │   └── newpost.hbs
+  ├── routes
+  │   ├── index.js
+  │   └── posts.js
+  ├── config
+  │   └── database.js
+  ├── .env
+  ├── .gitignore
+  ├── app.js
+  ├── package.json
+  └── README.md
+
+
+
+
+You will write a responsive blog website in node.js + express.js styled with Bootstrap.  The website will be simple and clean. It will present all the posts as a continuous flow of posts from newest to oldest. To enable easy filtering, each post will be tagged. Os the left panel, there will be a word cloud (many tags, the size and thickness of the tag will express incidence of a tag among the posts). Anyone will be able to create an account and log-in with existing Google account and then to write a blog post. In the blog post, the user can insert text and images. The database for the blog posts and images will be Postgres so that I can test it later in Heroku. Now, you will write only the code under the views folder.
+Below, there is my structure of the project:
+/blog
+  ├── public
+  │   ├── css
+  │   │    └── styles.css
+  │   ├── img
+  │   ├── js
+  │   │    └── main.js
+  │   └── libs
+  │        └── bootstrap
+  ├── views
+  │   ├── layouts
+  │   │    └── main.hbs
+  │   ├── partials
+  │   │    └── wordcloud.hbs
+  │   ├── index.hbs
+  │   ├── login.hbs
+  │   ├── register.hbs
+  │   └── newpost.hbs
+  ├── routes
+  │   ├── index.js
+  │   └── posts.js
+  ├── config
+  │   └── database.js
+  ├── .env
+  ├── .gitignore
+  ├── app.js
+  ├── package.json
+  └── README.md
+
+
+
+Now that you have all the files written, you need to complete a few steps to make the site run:
+
+Install the necessary node.js packages by running the following command in your project root folder:
+npm install
+Make sure your package.json file includes required dependencies, such as express, express-handlebars, pg, passport, passport-google-oauth20, and other required packages.
+
+Configure your app.js file to set up the server, handle routing, and connect to the database. This file should include the following:
+Importing required modules and packages
+Setting up middleware and view engine (using Handlebars)
+Configuring and connecting to the database
+Setting up routes
+Starting the server
+Set up your .env file to include your sensitive information, such as your database connection string, Google OAuth credentials, and other necessary secrets.
+
+Complete your routes folder files (index.js and posts.js) to handle user authentication (login, registration), creating new posts, and displaying existing posts.
+
+Configure the config/database.js file to connect to your Postgres database using the connection string from the .env file.
+
+Write the necessary CSS in public/css/styles.css to style the website, and write any required JavaScript to handle user interactions in public/js/main.js.
+
+To deploy your app to Heroku, follow these steps:
+
+Sign up for a Heroku account if you haven't already: https://signup.heroku.com/
+Install the Heroku CLI: https://devcenter.heroku.com/articles/heroku-cli
+Log in to your Heroku account using the CLI:
+heroku login
+Create a new Heroku app:
+heroku create
+Add the Heroku Postgres add-on to your app:
+heroku addons:create heroku-postgresql:hobby-dev
+Configure your app to use the Heroku Postgres connection string:
+heroku config:set DATABASE_URL=$(heroku config:get DATABASE_URL)
+Commit your changes to your local Git repository:
+git add .
+git commit -m "Prepare for Heroku deployment"
+Push your changes to Heroku:
+git push heroku main
+Open your deployed app in the browser:
+heroku open
+That's it! Your blog website should now be up and running.
+
+
+
+
+------------------------------
+User Authentication: You mentioned that users will be able to create an account and log in with their existing Google account. You will need to write code to handle user authentication and sessions. You may want to use a third-party authentication library like Passport.js to make this process easier.
+
+Image Uploads: You mentioned that users will be able to insert images in their blog posts. You will need to write code to handle image uploads and storage. You may want to use a third-party library like Multer to handle file uploads.
+
+Tagging System: You mentioned that each post will be tagged to enable easy filtering. You will need to write code to implement a tagging system. You may want to use a third-party library like node-tags-input to make this process easier.
+
+Search Functionality: You may want to include a search functionality to allow users to search for specific posts based on keywords or tags. You will need to write code to implement search functionality, which may involve querying your Postgres database.
+
+Error Handling: It is important to include error handling in your code to ensure that your application handles errors gracefully and does not crash. You will need to write code to handle errors and provide appropriate error messages to users.
+
